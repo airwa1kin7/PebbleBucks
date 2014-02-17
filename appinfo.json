@@ -1,39 +1,41 @@
 {
-	"uuid": "73cc3819-4295-4ce7-8c49-d964f49d10b6",
-	"shortName": "PebbleBucks Canada",
-	"longName": "PebbleBucks Canada",
-	"companyName": "Derrick Klabouch",
-	"versionCode": 1,
-	"versionLabel": "1.0.0",
-	"watchapp": {
-		"watchface": false
-	},
-	"appKeys": {
-		"rewards": 0,
-		"stars": 1,
-		"balance": 2,
-		"status": 3,
-		"barcode": 4
-	},
-	"capabilities": [ "configurable" ],
-	"resources": {
-		"media": [
-			{
-				"menuIcon": true,
-				"type": "png",
-				"name": "IMAGE_MENU_ICON",
-				"file": "images/icon.png"
-			},
-			{
-				"type": "png",
-				"name": "IMAGE_REWARD",
-				"file": "images/reward.png"
-			},
-			{
-				"type": "png",
-				"name": "IMAGE_STAR",
-				"file": "images/star.png"
-			}
-		]
-	}
+    "versionLabel": "1.0.0",
+    "uuid": "73cc3819-4295-4ce7-8c49-d964f49d10b6",
+    "appKeys": {
+        "status": 3,
+        "balance": 2,
+        "rewards": 0,
+        "barcode": 4,
+        "stars": 1
+    },
+    "longName": "PebbleBucks Canada",
+    "versionCode": 1,
+    "capabilities": [
+        "configurable"
+    ],
+    "shortName": "PebbleBucks Canada",
+    "companyName": "airwa1k",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "png",
+                "name": "IMAGE_STAR",
+                "file": "images/star.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_REWARD",
+                "file": "images/reward.png"
+            },
+            {
+                "menuIcon": true,
+                "type": "png",
+                "name": "IMAGE_MENU_ICON",
+                "file": "images/icon.png"
+            }
+        ]
+    }
 }
