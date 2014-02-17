@@ -1,10 +1,10 @@
 {
-	"uuid": "7ff57cf2-bf8d-424c-bfd2-c64d8e886ae9",
-	"shortName": "PebbleBucks",
-	"longName": "PebbleBucks",
-	"companyName": "Alexsander Akers",
-	"versionCode": 2,
-	"versionLabel": "2.0.1",
+	"uuid": "73cc3819-4295-4ce7-8c49-d964f49d10b6",
+	"shortName": "PebbleBucks Canada",
+	"longName": "PebbleBucks Canada",
+	"companyName": "Derrick Klabouch",
+	"versionCode": 1,
+	"versionLabel": "1.0.0",
 	"watchapp": {
 		"watchface": false
 	},
