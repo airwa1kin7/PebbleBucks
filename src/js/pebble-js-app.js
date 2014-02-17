@@ -19,6 +19,18 @@
     sendResponse("?", "?", "Error", error || "Log in to Sbux in Pebble app.");
   }
 
+  function sendErrorLogin(error) {
+    sendResponse("?", "?", "Error", error || "Log in Error.”);
+  }
+
+  function sendErrorResponseText(error) {
+    sendResponse("?", "?", "Error", error || "ResponseText Error.”);
+  }
+
+  function sendErrorAppMessage(error) {
+    sendResponse("?", "?", "Error", error || "AppMessage Error.”);
+  }
+
   function fetch() {
     if (currentXHR) {
       currentXHR.abort();
@@ -29,7 +41,7 @@
     if (username && password) {
       function failure(that) {
         that = that || this;
-        sendError('HTTP Error ' + that.status);
+        sendErrorLogin(‘HTTP Error ' + that.status);
       };
 
       function startLoad() {
@@ -83,7 +95,7 @@
               status: status
             });
           } else {
-            sendError();
+            sendErrorResponseText();
           }
         };
         xhr.onerror = failure;
@@ -98,7 +110,7 @@
 
       Pebble.sendAppMessage({ status: 'Logging in...' });
     } else {
-      sendError();
+      sendErrorAppMessage();
     }
   }
 
@@ -123,6 +135,7 @@
   Pebble.addEventListener("showConfiguration", function() {
     var card_number = storage('card_number') || '';
     var username = storage('username') || '';
-    Pebble.openURL('http://airwa1kin7.github.io/PebbleBucks/configure.html?card_number=' + encodeURIComponent(card_number) + '&username=' + encodeURIComponent(username));
+    var password = storage('password') || '';
+    Pebble.openURL('http://airwa1kin7.github.io/PebbleBucks/configure.html?card_number=' + encodeURIComponent(card_number) + '&username=' + encodeURIComponent(username) + ‘&password=' + encodeURIComponent(password));
   });
 }).call(this);
