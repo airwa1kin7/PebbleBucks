@@ -20,7 +20,7 @@
   }
 
   function sendErrorLogin(error) {
-    sendResponse("?", "?", "Error", error || "Log in Error.”);
+    sendResponse("?", "?", "Error", error || "Log in Error. Open Pebble app.”);
   }
 
   function sendErrorResponseText(error) {
@@ -127,7 +127,7 @@
 
     storeKeyFromPayload('card_number');
     storeKeyFromPayload('username');
-    storeKeyFromPayload('password');
+    storeKeyFromPayload('password’);
     
     if (payload.barcode_data) Pebble.sendAppMessage({ barcode: payload.barcode_data });
   });
