@@ -18,18 +18,6 @@
   function sendError(error) {
     sendResponse("?", "?", "Error", error || "Log in to Sbux in Pebble app.");
   }
-  
-  function sendErrorLogin(error) {
-    sendResponse("?", "?", "Error", error || "Log in Error. Open Pebble app.");
-  }
-
-  function sendErrorResponseText(error) {
-    sendResponse("?", "?", "Error", error || "ResponseText Error.");
-  }
-
-  function sendErrorAppMessage(error) {
-    sendResponse("?", "?", "Error", error || "AppMessage Error.");
-  }
 
   function fetch() {
     if (currentXHR) {
@@ -41,7 +29,7 @@
     if (username && password) {
       function failure(that) {
         that = that || this;
-        sendErrorLogin(‘HTTP Error ' + that.status);
+        sendError('HTTP Error ' + that.status);
       };
 
       function startLoad() {
@@ -95,7 +83,7 @@
               status: status
             });
           } else {
-            sendErrorResponseText();
+            sendError();
           }
         };
         xhr.onerror = failure;
@@ -110,7 +98,7 @@
 
       Pebble.sendAppMessage({ status: 'Logging in...' });
     } else {
-      sendErrorAppMessage();
+      sendError();
     }
   }
 
