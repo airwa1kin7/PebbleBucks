@@ -135,7 +135,6 @@
   Pebble.addEventListener("showConfiguration", function() {
     var card_number = storage('card_number') || '';
     var username = storage('username') || '';
-    var password = storage('password') || '';
-    Pebble.openURL('http://airwa1kin7.github.io/PebbleBucks/configure.html?card_number=' + encodeURIComponent(card_number) + '&username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
+    Pebble.openURL('http://airwa1kin7.github.io/PebbleBucks/configure.html?card_number=' + encodeURIComponent(card_number) + '&username=' + encodeURIComponent(username));
   });
 }).call(this);
