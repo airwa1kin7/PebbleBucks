@@ -18,17 +18,17 @@
   function sendError(error) {
     sendResponse("?", "?", "Error", error || "Log in to Sbux in Pebble app.");
   }
-
+  
   function sendErrorLogin(error) {
-    sendResponse("?", "?", "Error", error || "Log in Error. Open Pebble app.”);
+    sendResponse("?", "?", "Error", error || "Log in Error. Open Pebble app.");
   }
 
   function sendErrorResponseText(error) {
-    sendResponse("?", "?", "Error", error || "ResponseText Error.”);
+    sendResponse("?", "?", "Error", error || "ResponseText Error.");
   }
 
   function sendErrorAppMessage(error) {
-    sendResponse("?", "?", "Error", error || "AppMessage Error.”);
+    sendResponse("?", "?", "Error", error || "AppMessage Error.");
   }
 
   function fetch() {
