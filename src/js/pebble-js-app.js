@@ -37,7 +37,7 @@
     if (username && password) {
       function failure(that) {
         that = that || this;
-        sendError('HTTP Error ' + that.status);
+        sendError('HTTP Error UserName Wrong' + that.status);
       };
 
       function startLoad() {
