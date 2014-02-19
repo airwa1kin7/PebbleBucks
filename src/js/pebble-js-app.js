@@ -45,7 +45,7 @@
       };
 
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://www.starbucks.ca/account/signin', true);
+      xhr.open('POST', 'https://www.starbucks.com/account/signin', true);
       xhr.onloadstart = startLoad;
       xhr.onload = function() {
         if (xhr.readyState != 4) return;
@@ -56,7 +56,7 @@
         }
 
         xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://www.starbucks.ca/account/home', true);
+        xhr.open('GET', 'https://www.starbucks.com/account/home', true);
         xhr.onloadstart = startLoad;
         xhr.onload = function() {
           if (xhr.readyState != 4) return;
