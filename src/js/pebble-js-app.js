@@ -127,7 +127,7 @@
 
     storeKeyFromPayload('card_number');
     storeKeyFromPayload('username');
-    storeKeyFromPayload('password’);
+    storeKeyFromPayload('password');
     
     if (payload.barcode_data) Pebble.sendAppMessage({ barcode: payload.barcode_data });
   });
