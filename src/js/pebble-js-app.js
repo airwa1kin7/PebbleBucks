@@ -16,15 +16,15 @@
   }
 
   function sendError(error) {
-    sendResponse("?", "?", "Error 01", error || "Log in to Sbux in Pebble app.");
+    sendResponse("?", "?", "Error", error || "Log in to Sbux in Pebble app.");
   }
   
     function sendErrorResponseText(error) {
-    sendResponse("?", "?", "Error 02", error || "Response Text Error");
+    sendResponse("?", "?", "Error 02", error || "Could not get Data from site.");
   }
   
     function sendErrorLoggingIn(error) {
-    sendResponse("?", "?", "Error 03" , error || "Logging In Error");
+    sendResponse("?", "?", "Error 03" , error || "Could not log in or retrive balance.");
   }
 
   function fetch() {
@@ -45,7 +45,7 @@
       };
 
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://www.starbucks.com/account/signin', true);
+      xhr.open('POST', 'http://www.starbucks.ca/account/signin', true);
       xhr.onloadstart = startLoad;
       xhr.onload = function() {
         if (xhr.readyState != 4) return;
@@ -56,7 +56,7 @@
         }
 
         xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://www.starbucks.com/account/home', true);
+        xhr.open('GET', 'http://www.starbucks.ca/account/home', true);
         xhr.onloadstart = startLoad;
         xhr.onload = function() {
           if (xhr.readyState != 4) return;
